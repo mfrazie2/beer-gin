@@ -1,20 +1,21 @@
 :root {
+	--dark-dark-blue: #001132;
 	--dark-blue: #324158;
-	--white: #fff;
+	--light-blue: #4A5A72;
+	--white: #fafbfc;
+	--red: #ca6463;
+	--overlay: #6f6f6f;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-html, body {
-	width: 1280px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .hero {
-	background: url('./assets/Hero.png') center no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/Hero.png') center no-repeat;
 	width: 100%;
 	height: 1065px;
 	display: grid;
@@ -22,10 +23,15 @@ html, body {
 	grid-template-columns: 1fr calc(100% - 256px) 1fr;
 }
 
+.main-logo {
+	justify-self: center;
+	align-self: center;
+}
+
 .horizontal-border {
 	height: 128px;
 	width: 100%;
-	background-color: var(--dark-blue);
+	background-color: var(--dark-dark-blue);
 	opacity: 0.8;
 }
 
@@ -41,7 +47,7 @@ html, body {
 .vertical-border {
 	width: 128px;
 	height: 100%;
-	background-color: var(--dark-blue);
+	background-color: var(--dark-dark-blue);
 }
 
 .vb-left {
@@ -68,6 +74,11 @@ nav {
 	grid-column: 2;
 	justify-self: center;
 	align-self: center;
+}
+.nav-item {
+	align-self: center;
+	font-size: 24px;
+	text-transform: uppercase;
 }
 .item-1 {
 	grid-column: 3;
